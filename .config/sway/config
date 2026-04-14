@@ -59,7 +59,8 @@ exec swayidle -w \
 exec copyq --start-server
 
 # POLKIT 
-exec "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id sh -c ' eval $(gnome-keyring-daemon --login) eval $(gnome-keyring-daemon --start --components=secrets,ssh) export SSH_AUTH_SOCK'
 
 ###AUTOSTARTS
 #TODO: melhorar
@@ -91,6 +92,9 @@ exec swaync
 ### MONTAR AUTOMATICAMENTE DISCOS
 exec udiskie
 
+### NETWORKMANAGER
+exec nm-applet
+
 # Leia `man 5 sway-input` para mais informação sobre essa seção
 
 ### BINDS DE TECLAS
@@ -108,6 +112,9 @@ exec udiskie
 
     # iniciar seu browser
     bindsym $mod+g exec $browser
+
+    #iniciar seu explorador de arquivos
+    bindsym $mod+r exec $explorer
 
     # Arrastar janela = $mod + segurar botão esquerdo
     # Mudar tamanho da janela = $mod + segurar botão direito

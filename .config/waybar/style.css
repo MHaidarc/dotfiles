@@ -73,14 +73,16 @@
 }
 
 window#waybar {
-	background-color: @bg;
-	color: @fg;
+	background-color: @crust;
+	color: transparent;
 	transition-property: background-color;
 	transition-duration: .5s;
+	border-radius: 15px;
 }
 
 window#waybar>box {
 	padding: 4px;
+	border-radius: 15px;
 }
 
 window#waybar.hidden {
