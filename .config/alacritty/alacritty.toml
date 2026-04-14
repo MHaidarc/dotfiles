@@ -1,0 +1,17 @@
+[general]
+import = [ 
+	"~/.config/alacritty/theme.toml"
+]
+live_config_reload = true
+
+[window]
+decorations = "None"
+opacity = 0.75
+
+[font]
+normal = { 
+	family = "JetBrains Mono Nerd Font",
+	style = "Regular",
+}
+size = 12
+
