@@ -6,7 +6,6 @@ live_config_reload = true
 
 [window]
 decorations = "None"
-opacity = 0.75
 
 [font]
 normal = { 
