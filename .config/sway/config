@@ -29,8 +29,20 @@ output * bg /home/maty/Imagens/Wallpaper/celeste-wall.jpg fill
 output eDP-1 resolution 1366x768@60.00Hz position 597,1080
 output HDMI-A-1 resolution 2560x1080@74.991Hz position 0,0
 
+workspace 3 output HDMI-A-1
 workspace 1 output HDMI-A-1
 workspace 2 output eDP-1
+
+###AUTOSTARTS
+#TODO: melhorar
+workspace 3
+exec $email
+workspace 1
+exec $browser
+workspace 2
+exec $term
+
+
 
 ### EYECANDY
 
@@ -63,18 +75,8 @@ exec copyq --start-server
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id sh -c ' eval $(gnome-keyring-daemon --login) eval $(gnome-keyring-daemon --start --components=secrets,ssh) export SSH_AUTH_SOCK'
 
-###AUTOSTARTS
-#TODO: melhorar
-workspace 1
-exec $browser
-workspace 2
-exec $term
-workspace 3
-exec $email
 
 ### CONFIGURAÇÃO DE ENTRADAS
-#TODO: implementar CAPSLOCK -> esc ou super
-
    input type:touchpad {
        dwt disabled 
        tap enabled
@@ -185,24 +187,24 @@ exec nm-applet
 #
 # Layout:
 #
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
+    # Você pode trocar o objeto do seu foco com
+    # $mod+b ou $mod+v, para splits horizontais ou verticais
+    # respectivamente.
     bindsym $mod+b splith
     bindsym $mod+v splitv
 
-    # Switch the current container between different layout styles
+    # Troca o conteiner atual para diferentes layouts
     bindsym $mod+s layout stacking
     bindsym $mod+w layout toggle tabbed
     bindsym $mod+e layout toggle split
 
-    # Make the current focus fullscreen
+    # Transforma o foco atual em tela cheia
     bindsym $mod+f fullscreen
 
-    # Toggle the current focus between tiling and floating mode
+    # Troca o modo do foco atual entre mosaico e flutuante
     bindsym $mod+Shift+space floating toggle
 
-    # Swap focus between the tiling area and the floating area
+    # Troca o foco entre a área flutuante e a área mosaico
     bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
