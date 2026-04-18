@@ -1,6 +1,6 @@
 # Configuração SWAY por maty bones
 # Leia `man 5 sway` para uma referência completa
-### TODO: LER A WIKI DO SWAY E DO I3
+###TODO: SCRIPT DE DESLIGAMENTO
 
 ### INCLUDES
 # Tema de cores
@@ -21,6 +21,7 @@ set $term alacritty
 set $menu pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun
 set $browser firefox
 set $explorer nautilus
+set $email thunderbird
 
 ### PAPEL DE PAREDE E MONITORES
 output * bg /home/maty/Imagens/Wallpaper/celeste-wall.jpg fill
@@ -68,6 +69,8 @@ workspace 1
 exec $browser
 workspace 2
 exec $term
+workspace 3
+exec $email
 
 ### CONFIGURAÇÃO DE ENTRADAS
 #TODO: implementar CAPSLOCK -> esc ou super
@@ -108,13 +111,13 @@ exec nm-applet
     bindsym $mod+c kill
 
     # Iniciar seu launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+d exec $explorer
 
     # iniciar seu browser
     bindsym $mod+g exec $browser
 
     #iniciar seu explorador de arquivos
-    bindsym $mod+r exec $explorer
+    bindsym $mod+r exec $menu
 
     # Arrastar janela = $mod + segurar botão esquerdo
     # Mudar tamanho da janela = $mod + segurar botão direito
