@@ -1,6 +1,7 @@
 # Configuração SWAY por maty bones
 # Leia `man 5 sway` para uma referência completa
 ###TODO: SCRIPT DE DESLIGAMENTO
+###      CONFIGURAR THUNDERBIRD E FIREFOX
 
 ### INCLUDES
 # Tema de cores
@@ -42,8 +43,6 @@ exec $browser
 workspace 2
 exec $term
 
-
-
 ### EYECANDY
 
 font pango:JetBrains Mono Nerd Font, 11px
@@ -57,7 +56,6 @@ default_floating_border pixel 2px
 ### CONFIGURAÇÕES GERAIS
 
 # IDLE
-#TODO: melhorar isso.
 exec swayidle -w \
         timeout 300 'swaylock -f -c 000000' \
         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
@@ -209,6 +207,8 @@ exec nm-applet
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
+    bindsym $mod+Shift+Return exec eww open powermenu-0 --toggle && eww open powermenu-1 --toggle
 
     focus_follows_mouse no
 #

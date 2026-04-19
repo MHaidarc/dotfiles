@@ -1,0 +1,84 @@
+$mocha-base: #1e1e2e;
+$mocha-text: #cdd6f4;
+$mocha-pink: #f5c2e7;
+$mocha-mauve: #cba6f7;
+$mocha-red: #f38ba8;
+$mocha-maroon: #eba0ac;
+$mocha-peach: #fab387;
+$mocha-yellow: #f9e2af;
+$mocha-green: #a6e3a1;
+$mocha-teal: #94e2d5;
+$mocha-sky: #89dceb;
+$mocha-sapphire: #74c7ec;
+$mocha-blue: #89b4fa;
+$mocha-lavender: #b4befe;
+$mocha-text: #cdd6f4;
+$mocha-subtext1: #bac2de;
+$mocha-subtext0: #a6adc8;
+$mocha-overlay2: #9399b2;
+$mocha-overlay1: #7f849c;
+$mocha-overlay0: #6c7086;
+$mocha-surface2: #585b70;
+$mocha-surface1: #45475a;
+$mocha-surface0: #313244;
+$mocha-base: #1e1e2e;
+$mocha-mantle: #181825;
+$mocha-crust: #11111b;
+
+* { all: unset; }
+
+.layout-box {
+  background-color: rgba($mocha-base, 0.9);
+  font-family: "JetBrains Mono Nerd Font";
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 5em;
+  color: rgba($mocha-surface0, 0.8);
+  border : solid 2px;
+  border-color : rgba($mocha-green, 0.8);
+}
+
+.net-box,
+.bat-box,
+.tm-box {
+  label {
+    font-size: 4em;
+  }
+}
+
+.close-btn {
+  font-size: 4em;
+  &:hover {
+    color: $mocha-red;
+  }
+}
+
+.btns-box {
+  font-size: 5em;
+  border: solid 2px;
+
+  button {
+    padding: 0.8em;
+    border-radius: 0.2em;
+    border: solid 2px;
+    background-color: rgba($mocha-surface0, 0.3);
+
+    &:hover {
+      transition: 200ms linear background-color, border-radius;
+      background-color: rgba($mocha-surface2, 0.6);
+    }
+
+    &:first-child {
+      color: rgba($mocha-red, 0.8);
+    }
+    &:nth-child(2) {
+      color: rgba($mocha-blue, 0.8);
+    }
+    &:nth-child(3) {
+      color: rgba($mocha-mauve, 0.8);
+    }
+    &:last-child {
+      color: rgba($mocha-yellow, 0.8);
+    }
+  }
+}
