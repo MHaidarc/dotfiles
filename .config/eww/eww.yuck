@@ -2,27 +2,21 @@
   :monitor 1
   :stacking "fg"
   :geometry (geometry :width "30%" :height "35%" :anchor "center")
-  (powermenu_layout-1))
+  (powermenu_layout))
 
 (defwindow powermenu-0
   :monitor 0
   :stacking "fg"
   :geometry (geometry :width "30%" :height "35%" :anchor "center")
-  (powermenu_layout-0))
+  (powermenu_layout))
 
-(defwidget powermenu_layout-0 []
+(defwidget powermenu_layout []
   (box :class "layout-box" :space-evenly false :orientation "vertical"
       (_buttons :shutdown "poweroff" :reboot "reboot"
                 :logout "loginctl kill-session self"
-                :close "eww close powermenu-0"
+                :close "eww close-all"
                 :shutdown_icon "⏻" :reboot_icon "󰑓" :logout_icon "󰍃" :close_icon "")))
 
-(defwidget powermenu_layout-1 []
-  (box :class "layout-box" :space-evenly false :orientation "vertical"
-      (_buttons :shutdown "poweroff" :reboot "reboot"
-                :logout "loginctl kill-session self"
-                :close "eww close powermenu-1"
-                :shutdown_icon "⏻" :reboot_icon "󰑓" :logout_icon "󰍃" :close_icon "")))
 
 (defwidget _buttons [shutdown shutdown_icon reboot
                     reboot_icon logout logout_icon

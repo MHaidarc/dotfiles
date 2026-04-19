@@ -73,6 +73,8 @@ exec copyq --start-server
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id sh -c ' eval $(gnome-keyring-daemon --login) eval $(gnome-keyring-daemon --start --components=secrets,ssh) export SSH_AUTH_SOCK'
 
+# EWW
+exec eww daemon --restart
 
 ### CONFIGURAÇÃO DE ENTRADAS
    input type:touchpad {
@@ -118,6 +120,10 @@ exec nm-applet
 
     #iniciar seu explorador de arquivos
     bindsym $mod+r exec $menu
+
+    #Menu de liga/desliga
+    bindsym $mod+Shift+Return exec eww open powermenu-0 --toggle && eww open powermenu-1 --toggle
+
 
     # Arrastar janela = $mod + segurar botão esquerdo
     # Mudar tamanho da janela = $mod + segurar botão direito
@@ -208,7 +214,6 @@ exec nm-applet
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
-    bindsym $mod+Shift+Return exec eww open powermenu-0 --toggle && eww open powermenu-1 --toggle
 
     focus_follows_mouse no
 #
