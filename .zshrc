@@ -51,6 +51,8 @@ bindkey "^[[F" end-of-line
 #------------------------------
 # Alias stuff
 #------------------------------
+alias vim="nvim"
+alias vi="nvim"
 alias ls="ls --color -F"
 alias ll="ls --color -lh"
 alias spm="sudo pacman"
