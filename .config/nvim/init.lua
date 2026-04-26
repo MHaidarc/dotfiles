@@ -149,6 +149,9 @@ vim.o.splitbelow = true
 --   and `:help lua-guide-options`
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.tabstop = 4 -- Always 8 (see :h tabstop)
+vim.opt.softtabstop = 4 -- What you expecting
+vim.opt.shiftwidth = 4 -- What you expecting
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
@@ -604,17 +607,19 @@ require('lazy').setup({
         jdtls = {},
         cssls = {},
         html = {},
+        gopls = {},
+        ts_ls = {},
+
+        gofumpt = {},
+        prettierd = {},
 
         -- clangd = {},
-        gopls = {},
-        gofumpt = {},
         -- rust_analyzer = {},
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        -- ts_ls = {},
 
         stylua = {}, -- Used to format Lua code
 
@@ -714,8 +719,12 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
-        go = { 'gofumpt' }
+
+        javascript = { "prettierd", "prettier", stop_after_first = true },
+        go = { 'gofumpt' },
+        html = { "prettierd" },
+        css = { "prettierd" },
+        java = { "jdtls" },
       },
     },
   },
