@@ -210,6 +210,9 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
+vim.keymap.set('n', '<leader>pv', "<cmd>vsplit<CR>", { desc = 'S[P]lit [V]ertically'})
+vim.keymap.set('n', '<leader>ph', "<cmd>split<CR>", { desc = 'S[P]lit [H]orizontally'})
+vim.keymap.set('n', '<leader>pt', "<cmd>split<CR><cmd>terminal<CR>", { desc = 'S[P]lit [T]erminal'})
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
