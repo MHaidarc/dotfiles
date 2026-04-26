@@ -64,9 +64,6 @@
 @define-color clock @bright-blue;
 @define-color tray @empty;
 
-
-
-
 * {
 	font-family: "Jetbrains Mono Nerd Font";
 	font-size: 13px;

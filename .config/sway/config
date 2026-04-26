@@ -1,7 +1,6 @@
 # Configuração SWAY por maty bones
 # Leia `man 5 sway` para uma referência completa
-###TODO: SCRIPT DE DESLIGAMENTO
-###      CONFIGURAR THUNDERBIRD E FIREFOX
+###TODO: CONFIGURAR THUNDERBIRD, FIREFOX E MELHORAR COMPATIBILIDADE DE TEMAS GTK, QT E PADRÃO TEMA ESCURO
 
 ### INCLUDES
 # Tema de cores
@@ -36,22 +35,19 @@ workspace 2 output eDP-1
 
 ###AUTOSTARTS
 #TODO: melhorar
-workspace 3
-exec $email
 workspace 1
 exec $browser
 workspace 2
 exec $term
+workspace 3
+exec $email
 
 ### EYECANDY
 
 font pango:JetBrains Mono Nerd Font, 11px
 
-gaps inner 10px
-gaps outer 5px
-
-default_border pixel 2px
-default_floating_border pixel 2px
+default_border pixel 1px
+default_floating_border pixel 1px
 
 ### CONFIGURAÇÕES GERAIS
 
