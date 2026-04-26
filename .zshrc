@@ -25,6 +25,7 @@ export BROWSER="firefox"
 export EDITOR="nvim"
 export PATH="${PATH}:${HOME}/bin:${HOME}/.cabal/bin"
 export GOPATH="$HOME/go"
+export MANPAGER='nvim +Man!'
 
 #-----------------------------
 # Dircolors
