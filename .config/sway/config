@@ -85,7 +85,6 @@ exec eww daemon --restart
    input type:keyboard {
 	xkb_layout "br"
 	xkb_variant "dvorak"
-    xkb_options caps:ctrl_modifier,caps:swapescape
    }
 
 ### NOTIFICAÇÕES
