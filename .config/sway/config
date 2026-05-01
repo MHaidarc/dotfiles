@@ -22,6 +22,7 @@ set $menu pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun
 set $browser firefox
 set $explorer nautilus
 set $email thunderbird
+set $rss flatpak run io.gitlab.news_flash.NewsFlash
 
 ### PAPEL DE PAREDE E MONITORES
 output * bg /home/maty/Imagens/Wallpaper/celeste-wall.jpg fill
@@ -41,6 +42,8 @@ workspace 2
 exec $term
 workspace 3
 exec $email
+workspace 4
+exec $rss
 
 ### EYECANDY
 
